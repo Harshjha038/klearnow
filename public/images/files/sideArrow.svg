@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>80265C5D-81BF-4C7C-A47D-A104DA95111C</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.-Drayage-Marketplace-Landing" transform="translate(-723.000000, -845.000000)">
+            <g id="side-arrow" transform="translate(733.000000, 855.000000) scale(1, -1) rotate(90.000000) translate(-733.000000, -855.000000) translate(723.000000, 845.000000)">
+                <circle id="Oval" fill="#04ADB1" transform="translate(10.000000, 10.000000) scale(1, -1) translate(-10.000000, -10.000000) " cx="10" cy="10" r="10"></circle>
+                <g id="down-arrow" transform="translate(10.344828, 9.655172) scale(1, -1) translate(-10.344828, -9.655172) translate(4.137931, 6.206897)" fill="#FFFFFF" fill-rule="nonzero" stroke="#FFFFFF">
+                    <path d="M12.286778,0.1332667 C12.1156827,-0.0444222333 11.8376529,-0.0444222333 11.6665577,0.1332667 L6.21289643,5.80820701 L0.748541738,0.1332667 C0.577446484,-0.0444222333 0.299416695,-0.0444222333 0.128321441,0.1332667 C-0.0427738136,0.310955633 -0.0427738136,0.59970015 0.128321441,0.777389083 L5.89209283,6.76328502 C5.97764045,6.85212949 6.08457499,6.89655172 6.20220297,6.89655172 C6.30913751,6.89655172 6.4267655,6.85212949 6.51231312,6.76328502 L12.2760845,0.777389083 C12.4578732,0.59970015 12.4578732,0.310955633 12.286778,0.1332667 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

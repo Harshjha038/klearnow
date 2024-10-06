@@ -1,0 +1,153 @@
+######################################
+#
+# KLEAREXPRESS CONFIDENTIAL
+# __________________
+#
+#  Copyright (c) 2018 - 2018 KlearExpress Corporation.
+#  All Rights Reserved.
+#
+# NOTICE:  All information contained herein is, and remains
+# the property of KlearExpress Corporation and its suppliers,
+# if any.  The intellectual and technical concepts contained
+# herein are proprietary to KlearExpress Corporation
+# and its suppliers and may be covered by U.S. and Foreign Patents,
+# patents in process, and are protected by trade secret or copyright law.
+# Dissemination of this information or reproduction of this material
+# is strictly forbidden unless prior written permission is obtained
+# from KlearExpress Corporation.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kn-drayage-dashboard-ui
+  namespace: ${cluster_namespace}
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: ${ssl_cert_arn}
+spec:
+  type: LoadBalancer
+  selector:
+    app: kn-drayage-dashboard-ui
+  ports:
+    - port: 443
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kn-drayage-dashboard-ui
+  namespace: ${cluster_namespace}
+spec:
+  replicas: ${pod_replicas}
+  selector:
+    matchLabels: 
+      app: kn-drayage-dashboard-ui
+  template:
+    metadata:
+      labels:
+        app: kn-drayage-dashboard-ui
+    spec:
+      containers:
+        - name: kn-drayage-dashboard-ui
+          image: ${docker_image}
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          env:
+            - name: NODE_ENV
+              value: ${cluster_namespace}
+            - name: CUSTOMER_MEDIA_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: CUSTOMER_MEDIA_BUCKET
+            - name: DRAYAGE_PARTNER_MEDIA_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: DRAYAGE_PARTNER_MEDIA_BUCKET
+            - name: DRAYAGE_PARTNER_DOC_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: DRAYAGE_PARTNER_DOC_BUCKET                                    
+            - name: KX_ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: KX_ENVIRONMENT
+            - name: KX_K8S_CLUSTER_AWS_REGION
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: KX_K8S_CLUSTER_AWS_REGION
+            - name: KX_S3_ATTACHMENT_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: KX_S3_ATTACHMENT_URL
+            - name: REACT_APP_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_CUSTOMER_API_URL
+            - name: REACT_APP_CHAT_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_CHAT_KEY
+            - name: REACT_APP_CUSTOMER_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_CUSTOMER_API_URL
+            - name: REACT_APP_CUSTOMER_STRIPE_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_CUSTOMER_STRIPE_KEY
+
+            - name: REACT_APP_LOGIN_URL_PARTNER
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_LOGIN_URL_PARTNER
+
+            - name: REACT_APP_LOGOUT_URL_PARTNER
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_LOGOUT_URL_PARTNER
+
+            - name: REACT_APP_MEDIA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_MEDIA_URL
+
+            - name: REACT_APP_SHIPMENT_MEDIA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: REACT_APP_SHIPMENT_MEDIA_URL
+
+            - name: TRUCKER_MEDIA_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: TRUCKER_MEDIA_BUCKET       
+            - name: DRAYAGE_BILL_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: microservices-vault
+                  key: DRAYAGE_BILL_BUCKET                  
+          ports:
+            - containerPort: 80
+          resources: {}
+
+      restartPolicy: Always
+

@@ -1,0 +1,84 @@
+{
+  "application": "${spin_application_name}",
+  "index": 0,
+  "keepWaitingPipelines": false,
+  "lastModifiedBy": "admin",
+  "limitConcurrent": true,
+  "name": "CD_Pre-Prod_to_PROD",
+  "notifications": [
+    {
+      "address": "spinnaker-approvals",
+      "level": "pipeline",
+      "type": "slack",
+      "when": ["pipeline.starting", "pipeline.complete", "pipeline.failed"]
+    }
+  ],
+  "spelEvaluator": "v4",
+  "stages": [
+    {
+      "account": "klearnow-pre-prod-us",
+      "cloudProvider": "kubernetes",
+      "manifestArtifact": {
+        "artifactAccount": "my-s3-account",
+        "reference": "s3://jenkins-kubernetes-deployments/${current_env}/${k8s_manifest_filename}.yaml",
+        "type": "s3/object"
+      },
+      "moniker": {
+        "app": "test"
+      },
+      "name": "Deploy (Manifest) [${current_env}]",
+      "refId": "1",
+      "requisiteStageRefIds": [],
+      "skipExpressionEvaluation": false,
+      "source": "artifact",
+      "trafficManagement": {
+        "enabled": false,
+        "options": {
+          "enableTraffic": false,
+          "services": []
+        }
+      },
+      "type": "deployManifest"
+    },
+    {
+      "failPipeline": true,
+      "instructions": "Do you want to move furtherwith build ??",
+      "judgmentInputs": [
+        {
+          "value": "yeah sure move further."
+        }
+      ],
+      "name": "Manual Judgment",
+      "notifications": [],
+      "refId": "2",
+      "requisiteStageRefIds": ["1"],
+      "type": "manualJudgment"
+    },
+    {
+      "account": "klearnow-prod-us",
+      "cloudProvider": "kubernetes",
+      "manifestArtifact": {
+        "artifactAccount": "my-s3-account",
+        "reference": "s3://jenkins-kubernetes-deployments/${next_env}/${k8s_manifest_filename}.yaml",
+        "type": "s3/object"
+      },
+      "moniker": {
+        "app": "test"
+      },
+      "name": "Deploy (Manifest) [${next_env}]",
+      "refId": "3",
+      "requisiteStageRefIds": ["2"],
+      "skipExpressionEvaluation": false,
+      "source": "artifact",
+      "trafficManagement": {
+        "enabled": false,
+        "options": {
+          "enableTraffic": false,
+          "services": []
+        }
+      },
+      "type": "deployManifest"
+    }
+  ],
+  "triggers": []
+}

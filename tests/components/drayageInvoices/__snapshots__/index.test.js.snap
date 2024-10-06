@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrayageInvoice renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      className="drayage-invoices-container drayage-partner"
+      style={
+        {
+          "paddingTop": "90px",
+        }
+      }
+    >
+      <div
+        className="drayage-invoice-searchbar"
+      >
+        <i
+          className="search icon "
+        />
+        <input
+          className="search icon drayage-invoice-input"
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          placeholder="Search Invoices"
+          value=""
+        />
+      </div>
+      <div
+        className="ui fluid container"
+      >
+        <div
+          className="drayage-title"
+        >
+          Invoices
+        </div>
+        <div
+          className="drayage-country-date"
+        />
+        <div
+          className="drayage-tabs"
+        >
+          <div
+            className="ui attached tabular menu"
+          >
+            <a
+              className="active item"
+              onClick={[Function]}
+            >
+              CHARGE LIST
+              <div
+                className="ui circular label"
+                onClick={[Function]}
+              >
+                0
+              </div>
+            </a>
+            <a
+              className="item"
+              onClick={[Function]}
+            >
+              PENDING
+              <div
+                className="ui circular label"
+                onClick={[Function]}
+              >
+                0
+              </div>
+            </a>
+            <a
+              className="item"
+              onClick={[Function]}
+            >
+              PAID
+              <div
+                className="ui circular label label-green"
+                onClick={[Function]}
+              >
+                0
+              </div>
+            </a>
+            <a
+              className="item"
+              onClick={[Function]}
+            >
+              DISPUTED
+              <div
+                className="ui circular label label-red"
+                onClick={[Function]}
+              >
+                0
+              </div>
+            </a>
+          </div>
+          <div
+            className="ui bottom attached segment active tab tab-pane"
+          >
+            <div
+              style={
+                {
+                  "display": "flow-root",
+                }
+              }
+            />
+            
+            
+            <div
+              className="dray-partner-charge-list-open-released-btn"
+            >
+              <div
+                className="ui buttons"
+              >
+                <button
+                  className="ui positive button"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  OPEN
+                </button>
+                <div
+                  className="or"
+                  data-text=""
+                />
+                <button
+                  className="ui button"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  GENERATED
+                </button>
+              </div>
+            </div>
+            <div
+              className="ui segment custom-loader"
+            >
+              <div
+                className="ui active transition visible dimmer"
+                onClick={[Function]}
+              >
+                <div
+                  className="content"
+                >
+                  <div
+                    className="ui text loader"
+                  >
+                    Loading
+                  </div>
+                </div>
+              </div>
+              <img
+                className="ui image"
+                src="/images/short-paragraph.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <style>
+      
+          .common-modal.ui.fullscreen.modal{
+            left: unset !important;
+          }
+          .common-modal  .close.icon{
+                    top: auto !important;
+                    position: relative !important;
+                    float: right !important;
+                    right: auto !important;
+                    color: #0A8B8F !important;
+                 }
+       .ui.dimmer .common-modal .content {
+                width:100% !important;
+           }
+    </style>
+  </div>
+</div>
+`;
