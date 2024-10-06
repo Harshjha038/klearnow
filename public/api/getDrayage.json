@@ -1,0 +1,63 @@
+{
+  "customerOpportunityList" : [
+  {
+    "customer": "lifestyle",
+    "customerId":"J1J2",
+    "opportunityList": [
+      {
+        "opportunityName": "east coast heavy traffic",
+        "opportunityId":"sd123231",
+        "startDate": "1628665200000",
+        "endDate": "1628665200000",
+        "grandTotalAmount": 111000,
+        "grandTotalVolume": 100000,
+        "currency": "",
+        "state": "PUBLISHED",
+        "numberOfViews":4,
+        "numberOfResponses":0
+      },
+      {
+        "opportunityName": "The Pacific West Coast",
+        "opportunityId":"sdfdsf23424",
+        "startDate": "1628665200000",
+        "endDate": "1628665200000",
+        "grandTotalAmount": 111000,
+        "grandTotalVolume": 100000,
+        "currency": "",
+        "state": "PUBLISHED",
+        "numberOfViews":4,
+        "numberOfResponses":2
+      }
+    ]
+  },{
+    "customer": "SUMITOMO",
+    "customerId":"A1J2",
+    "opportunityList": [
+      {
+        "opportunityName": "west coast",
+        "opportunityId":"ttr453453",
+        "startDate": "1628665200000",
+        "endDate": "1628665200000",
+        "grandTotalAmount": 111000,
+        "grandTotalVolume": 100000,
+        "currency": "",
+        "state": "PUBLISHED",
+        "numberOfViews":4,
+        "numberOfResponses":3
+      },
+      {
+        "opportunityName": "The Pacific West Coast",
+        "opportunityId":"fghe56546",
+        "startDate": "1628665200000",
+        "endDate": "1628665200000",
+        "grandTotalAmount": 111000,
+        "grandTotalVolume": 100000,
+        "currency": "",
+        "state": "PUBLISHED",
+        "numberOfViews":5,
+        "numberOfResponses":1
+      }
+    ]
+  }
+]
+}

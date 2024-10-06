@@ -1,0 +1,130 @@
+/*************************************************************************
+ * 
+ * KLEAREXPRESS CONFIDENTIAL
+ * __________________
+ * 
+ *  Copyright (c) 2018 - 2018 KlearExpress Corporation.
+ *  All Rights Reserved.
+ * 
+ * NOTICE:  All information contained herein is, and remains
+ * the property of KlearExpress Corporation and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to KlearExpress Corporation
+ * and its suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from KlearExpress Corporation.
+ */
+
+.tos-form {
+  padding: 45px;
+  border-radius: 8px !important;
+  background-color: white;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.1) !important;
+  width: 65vw;
+  min-width: 320px;
+  text-align: left;
+  max-height: 90vh;
+}
+
+.boldText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  padding: 0px;
+}
+
+span::before {
+  content: unset !important;
+  white-space: unset !important;
+}
+
+.tosLink {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: underline;
+  transition: 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.tos-title {
+  font-family: Roboto !important;
+  font-weight: regular !important;
+  margin-top: 0px !important;
+  margin-bottom: 5px !important;
+}
+
+.tosContainer {
+  // border: 0.5px solid lightgray;
+  max-height: 45vh;
+  overflow-x: hidden !important;
+  padding: 10px 15px;
+  text-align: justify;
+  font-size: 14px;
+  // overflow: scroll;
+}
+
+.tosSubmit {
+  display: flex !important;
+  flex: 1;
+  margin: 0px !important;
+  height: 45px;
+  color: white !important;
+  background-color: #008b8f !important;
+  border: 1px #008b8f solid !important;
+  margin-left: 10px !important;
+  max-width: 250px;
+
+  &:hover {
+    color: #008b8f !important;
+    background-color: white !important;
+  }
+}
+
+.tosCancel {
+  display: flex !important;
+  flex: 1;
+  margin: 0 !important;
+  height: 45px;
+  color: #008b8f !important;
+  background-color: white !important;
+  border: 1px #008b8f solid !important;
+  margin-right: 10px !important;
+  max-width: 250px;
+
+  &:hover {
+    color: white !important;
+    background-color: #008b8f !important;
+  }
+}
+
+.tos-contract {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .tos-form {
+    width: 90vw !important;
+  }
+
+  .tosContainer {
+    height: 200px;
+  }
+}
+
+.tosAccept {
+  margin: 15px 0 0 15px;
+  > label {
+    color: #008b8f !important;
+    font-family: Roboto !important;
+    font-weight: medium !important;
+    font-size: 16px !important;
+  }
+}
+
+.ui.checkbox .box:before,
+.ui.checkbox label:before {
+  border: 1px solid #008b8f !important;
+}

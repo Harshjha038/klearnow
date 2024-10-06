@@ -1,0 +1,175 @@
+{
+	"customerDetails": {
+		"customerName": "Buchan's Kennels & Structures",
+		"customerType": "CUSTOMER_USER",
+		"customerKxEmail": "lifestyle@shipment.klearexpress.com"
+	},
+	"opportunityDetails": {
+		"opportunityName": "east coast heavy traffic",
+		"startDate": 123456,
+		"endDate": 456789,
+		"state": "DRAYAGE_PUBLISHED"
+	},
+	"portList": [{
+			"sourcePort": "Oakland, CA",
+			"destinations": [{
+					"laneId": "1214",
+					"destinationId": "1375198022",
+					"destinationAddress": {
+						"addressId": {
+							"value": 1375198022
+						},
+						"address": {
+							"values": [{
+									"type": "STREET_NUMBER",
+									"information": "375"
+								},
+								{
+									"type": "STREET_NAME",
+									"information": "Queen's Road Central"
+								},
+								{
+									"type": "POSTAL_CODE",
+									"information": "99999"
+								},
+								{
+									"type": "CITY",
+									"information": "Sheung Wan"
+								},
+								{
+									"type": "COUNTY",
+									"information": "Hong Kong"
+								},
+								{
+									"type": "COUNTRY_SUB_ENTITY",
+									"information": "HK"
+								},
+								{
+									"type": "COUNTRY",
+									"information": "Hong Kong"
+								},
+								{
+									"type": "UNSTRUCTURED_STREET_ADDRESS"
+								}
+							]
+						},
+						"addressName": {
+							"value": "ANJI  MEISHANG   FURNITURE CO.,LTD"
+						}
+					},
+					"approxVolume": 1000,
+					"proposedBid": 350,
+					"partnerBids": [{
+						"partnerId": "P102",
+						"partnerName": "JBH",
+						"bidAmount": 332,
+						"submittedDate": "1628665200000",
+						"partnerStatus": "PARTNER_SUBMITTED",
+						"salesStatus": "SALES_PENDING_APPROVAL",
+						"customerStatus": ""
+					}],
+					"sourcePort": "Oakland, CA",
+					"sourcePortCode": "2811"
+				},
+				{
+					"laneId": "1215",
+					"destinationId": "5567",
+					"destinationAddress": {
+						"addressId": {
+							"value": 5567
+						},
+						"address": {
+							"values": [{
+									"type": "STREET_NUMBER",
+									"information": "375"
+								},
+								{
+									"type": "STREET_NAME",
+									"information": "Queen's Road Central"
+								},
+								{
+									"type": "POSTAL_CODE",
+									"information": "99999"
+								},
+								{
+									"type": "CITY",
+									"information": "Sheung Wan"
+								},
+								{
+									"type": "COUNTY",
+									"information": "Hong Kong"
+								},
+								{
+									"type": "COUNTRY_SUB_ENTITY",
+									"information": "HK"
+								},
+								{
+									"type": "COUNTRY",
+									"information": "Hong Kong"
+								},
+								{
+									"type": "UNSTRUCTURED_STREET_ADDRESS"
+								}
+							]
+						},
+						"addressName": {
+							"value": "ANJI  MEISHANG   FURNITURE CO.,LTD"
+						}
+					},
+					"approxVolume": 2000,
+					"proposedBid": 450,
+					"partnerBids": [{
+						"partnerId": "P103",
+						"partnerName": "CON-WAY",
+						"bidAmount": 332,
+						"submittedDate": "1628665200000",
+						"partnerStatus": "PARTNER_SUBMITTED",
+						"salesStatus": "SALES_PENDING_APPROVAL",
+						"customerStatus": ""
+					}],
+					"sourcePort": "Oakland, CA",
+					"sourcePortCode": "2811"
+				}
+			],
+			"sourcePortCode": "2811"
+		},
+		{
+			"sourcePort": "Changsha, Hunan",
+			"destinations": [{
+				"laneId": "1212",
+				"destinationId": "5325",
+				"destinationAddress": {
+					"addressId": {
+						"value": 5325
+					},
+					"address": {},
+					"addressName": {}
+				},
+				"approxVolume": 1000,
+				"proposedBid": 350,
+				"partnerBids": [{
+						"partnerId": "P102",
+						"partnerName": "JBH",
+						"bidAmount": 332,
+						"submittedDate": "1628665200000",
+						"partnerStatus": "PARTNER_SUBMITTED",
+						"salesStatus": "SALES_PENDING_APPROVAL",
+						"customerStatus": ""
+					},
+					{
+						"partnerId": "P103",
+						"partnerName": "CON-WAY",
+						"bidAmount": 332,
+						"submittedDate": "1628665200000",
+						"partnerStatus": "PARTNER_SUBMITTED",
+						"salesStatus": "SALES_PENDING_APPROVAL",
+						"customerStatus": ""
+					}
+				],
+				"sourcePort": "Changsha, Hunan",
+				"sourcePortCode": "57076"
+			}],
+			"sourcePortCode": "57076"
+		}
+	]
+}
